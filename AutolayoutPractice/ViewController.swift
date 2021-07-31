@@ -13,6 +13,8 @@ class ViewController: UIViewController {
     let label = UILabel()
     let buttonGroupView = UIView()
     
+    let stackView0 = UIStackView()
+    
     let stackView1 = UIStackView()
     let button1 = UIButton()
     let button2 = UIButton()
@@ -31,6 +33,8 @@ class ViewController: UIViewController {
     let stackView4 = UIStackView()
     let button0 = UIButton()
     let button = UIButton()
+    
+    var buttons: [UIButton] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,34 +45,37 @@ class ViewController: UIViewController {
         let buttons3 = [button7, button8, button9]
         let buttons4 = [button0, button]
         
-        let buttons = buttons1 + buttons2 + buttons3 + buttons4
-        let stacks = [stackView1, stackView2, stackView3]
+        buttons = buttons1 + buttons2 + buttons3 + [button]
+        
+        let stacks = [stackView1, stackView2, stackView3, stackView4]
 
-        label.text = "hello World"
-        label.backgroundColor = .lightGray
-        buttonGroupView.backgroundColor = .systemYellow
+        label.text = "result"
+        label.backgroundColor = .systemGray3
+        label.layer.cornerRadius = 50.0
+        label.layer.masksToBounds = true
+        
+        
+        stackView0.axis = .vertical
+        stackView0.spacing = 10.0
+        stackView0.distribution = .fillEqually
         
         stacks.forEach {
             $0.axis = .horizontal
             $0.spacing = 10.0
-            $0.distribution = .fillEqually
+            $0.distribution = .equalSpacing
         }
         
-        stackView4.axis = .horizontal
-        stackView4.spacing = 10.0
-        stackView4.distribution = .fill
-        
-        
-        buttons.forEach {
-            $0.backgroundColor = .systemGray4
-        }
         
         [label, buttonGroupView].forEach {
             self.view.addSubview($0)
         }
         
-        [stackView1, stackView2, stackView3, stackView4].forEach {
+        [stackView0].forEach {
             self.buttonGroupView.addSubview($0)
+        }
+        
+        [stackView1, stackView2, stackView3, stackView4].forEach {
+            self.stackView0.addArrangedSubview($0)
         }
         
         buttons1.forEach {
@@ -91,45 +98,48 @@ class ViewController: UIViewController {
             $0.top.equalTo(view.safeAreaLayoutGuide).offset(40.0)
             $0.left.equalToSuperview().offset(40.0)
             $0.right.equalToSuperview().offset(-40.0)
-            $0.height.equalTo(150)
+            $0.height.equalTo(buttonGroupView).dividedBy(2)
         }
         
         buttonGroupView.snp.makeConstraints {
-            $0.top.equalTo(label.snp.bottom).offset(40.0)
+            $0.top.equalTo(label.snp.bottom).offset(40.0).priority(.high)
             $0.left.equalToSuperview().offset(40.0)
             $0.right.equalToSuperview().offset(-40.0)
             $0.bottom.equalTo(view.safeAreaLayoutGuide).offset(-40.0)
         }
         
-        stackView1.snp.makeConstraints {
-            $0.top.left.right.equalToSuperview()
+        stackView0.snp.makeConstraints {
+            $0.top.right.bottom.left.equalToSuperview()
         }
-        
-        stackView2.snp.makeConstraints {
-            $0.top.equalTo(stackView1.snp.bottom).offset(10.0)
-            $0.left.right.equalToSuperview()
-            $0.height.equalTo(stackView1)
-        }
-        
-        stackView3.snp.makeConstraints {
-            $0.top.equalTo(stackView2.snp.bottom).offset(10.0)
-            $0.left.right.equalToSuperview()
-            $0.height.equalTo(stackView1)
-        }
-        
-        stackView4.snp.makeConstraints {
-            $0.top.equalTo(stackView3.snp.bottom).offset(10.0)
-            $0.left.right.equalToSuperview()
-            $0.height.equalTo(stackView1)
-            $0.bottom.equalToSuperview()
 
+        buttons.forEach { btn in
+            btn.snp.makeConstraints {
+                $0.height.equalTo(btn.snp.width)
+            }
+        }
+        
+        button0.snp.makeConstraints {
+            $0.height.equalTo(button1)
+            $0.right.equalTo(button8.snp.right)
         }
         
         button.snp.makeConstraints {
             $0.width.equalTo(button1)
         }
+    }
+    
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         
+        buttons.forEach {
+            $0.backgroundColor = .systemGray4
+            $0.layer.cornerRadius = $0.bounds.width / 2
+            $0.clipsToBounds = true
+        }
         
+        button0.backgroundColor = .systemOrange
+        button0.layer.cornerRadius = button0.bounds.height / 2
     }
 
 
