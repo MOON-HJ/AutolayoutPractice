@@ -14,6 +14,8 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .white
+
         label.text = "hello World"
         
         self.view.addSubview(label)
@@ -23,7 +25,6 @@ class ViewController: UIViewController {
             $0.centerY.equalToSuperview()
         }
         
-        // Do any additional setup after loading the view.
     }
 
 
