@@ -9,9 +9,20 @@ import UIKit
 import SnapKit
 
 class ViewController: UIViewController {
+    
+    let label = UILabel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        label.text = "hello World"
+        
+        self.view.addSubview(label)
+        
+        label.snp.makeConstraints {
+            $0.centerX.equalToSuperview()
+            $0.centerY.equalToSuperview()
+        }
+        
         // Do any additional setup after loading the view.
     }
 
