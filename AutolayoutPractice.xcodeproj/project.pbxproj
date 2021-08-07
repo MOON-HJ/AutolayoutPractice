@@ -13,6 +13,7 @@
 		736C4BC526B5675E00BEB1CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 736C4BC426B5675E00BEB1CA /* Assets.xcassets */; };
 		736C4BD126B5685000BEB1CA /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 736C4BD026B5685000BEB1CA /* SnapKit */; };
 		73CCA20A26BE77E800ECBC43 /* CustomKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CCA20926BE77E800ECBC43 /* CustomKeyboardViewController.swift */; };
+		73CCA20C26BEBEDD00ECBC43 /* CustomKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CCA20B26BEBEDD00ECBC43 /* CustomKeyboard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		736C4BC426B5675E00BEB1CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		736C4BC926B5675E00BEB1CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		73CCA20926BE77E800ECBC43 /* CustomKeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomKeyboardViewController.swift; sourceTree = "<group>"; };
+		73CCA20B26BEBEDD00ECBC43 /* CustomKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomKeyboard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				736C4BC926B5675E00BEB1CA /* Info.plist */,
 				7300D62A26B6847F00586E46 /* CertViewController.swift */,
 				73CCA20926BE77E800ECBC43 /* CustomKeyboardViewController.swift */,
+				73CCA20B26BEBEDD00ECBC43 /* CustomKeyboard.swift */,
 			);
 			path = AutolayoutPractice;
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				73CCA20A26BE77E800ECBC43 /* CustomKeyboardViewController.swift in Sources */,
+				73CCA20C26BEBEDD00ECBC43 /* CustomKeyboard.swift in Sources */,
 				7300D62B26B6847F00586E46 /* CertViewController.swift in Sources */,
 				736C4BC026B5675B00BEB1CA /* ViewController.swift in Sources */,
 				736C4BBC26B5675B00BEB1CA /* AppDelegate.swift in Sources */,
