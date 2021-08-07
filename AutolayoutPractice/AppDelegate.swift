@@ -18,7 +18,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        window?.rootViewController = ViewController()
         
         // 인증서 레이아웃
-        window?.rootViewController = CertViewController()
+//        window?.rootViewController = CertViewController()
+        
+        // 커스텀키보드
+        window?.rootViewController = CustomKeyboardViewController()
 
         window?.makeKeyAndVisible()
         return true
