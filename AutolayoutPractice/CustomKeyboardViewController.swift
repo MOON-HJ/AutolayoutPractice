@@ -7,7 +7,7 @@
 
 import UIKit
  
-class CustomKeyboardViewController: UIViewController {
+class CustomKeyboardViewController: UIViewController, CustomKeyboardDelegate {
     let customKeyboardTextField = UITextField()
     let defaultKeyboardTextField = UITextField()
 
@@ -24,6 +24,7 @@ class CustomKeyboardViewController: UIViewController {
         [customKeyboardTextField, defaultKeyboardTextField].forEach {
             self.view.addSubview($0)
         }
+        customKeyboard.delegate = self
         customKeyboardTextField.inputView = customKeyboard
         
         customKeyboardTextField.snp.makeConstraints {
@@ -47,6 +48,17 @@ class CustomKeyboardViewController: UIViewController {
         customKeyboard.snp.makeConstraints {
             $0.width.equalTo(self.view.bounds.width)
         }
+    }
+    
+    func keyboardTapped(value: String) {
+
+        let newValue = (customKeyboardTextField.text?.replacingOccurrences(of: ",", with: "") ?? "" ) + value
+        
+        let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = .decimal
+        let formattedNumber = numberFormatter.string(from: NSNumber(value: Int(newValue) ?? 0))
+        
+        customKeyboardTextField.text = formattedNumber
     }
 }
 

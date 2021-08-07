@@ -7,7 +7,14 @@
 
 import UIKit
 
+protocol CustomKeyboardDelegate {
+    func keyboardTapped(value: String)
+}
+
 class CustomKeyboard: UIView {
+    
+    var delegate: CustomKeyboardDelegate?
+    
     let customKeyboardContainer = UIStackView()
     let topButtonContainer = UIStackView()
     let middleButtonContainer = UIStackView()
@@ -69,7 +76,16 @@ class CustomKeyboard: UIView {
         customKeyboardContainer.snp.makeConstraints {
             $0.edges.equalTo(self.safeAreaLayoutGuide)
         }
-
+        
+        number1Button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+        number2Button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+        number3Button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+        number4Button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+        number5Button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+        number6Button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+        number7Button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+        number8Button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+        number9Button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
     }
     
     override func updateConstraints() {
@@ -82,5 +98,9 @@ class CustomKeyboard: UIView {
 
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    @objc func buttonAction(sender: UIButton) {
+        delegate?.keyboardTapped(value: sender.titleLabel?.text ?? "")
     }
 }
