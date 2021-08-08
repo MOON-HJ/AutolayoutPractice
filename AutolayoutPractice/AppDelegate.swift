@@ -21,7 +21,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        window?.rootViewController = CertViewController()
         
         // 커스텀키보드
-        window?.rootViewController = CustomKeyboardViewController()
+//        window?.rootViewController = CustomKeyboardViewController()
+        
+        // 커스텀 스위치
+        window?.rootViewController = CustomSwitchViewController()
 
         window?.makeKeyAndVisible()
         return true

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7300D62B26B6847F00586E46 /* CertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7300D62A26B6847F00586E46 /* CertViewController.swift */; };
+		734FDDDE26BF8582002AE26E /* CustomSwitchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734FDDDD26BF8582002AE26E /* CustomSwitchViewController.swift */; };
 		736C4BBC26B5675B00BEB1CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736C4BBB26B5675B00BEB1CA /* AppDelegate.swift */; };
 		736C4BC026B5675B00BEB1CA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736C4BBF26B5675B00BEB1CA /* ViewController.swift */; };
 		736C4BC526B5675E00BEB1CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 736C4BC426B5675E00BEB1CA /* Assets.xcassets */; };
@@ -18,6 +19,7 @@
 
 /* Begin PBXFileReference section */
 		7300D62A26B6847F00586E46 /* CertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertViewController.swift; sourceTree = "<group>"; };
+		734FDDDD26BF8582002AE26E /* CustomSwitchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSwitchViewController.swift; sourceTree = "<group>"; };
 		736C4BB826B5675B00BEB1CA /* AutolayoutPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutolayoutPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		736C4BBB26B5675B00BEB1CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		736C4BBF26B5675B00BEB1CA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 				7300D62A26B6847F00586E46 /* CertViewController.swift */,
 				73CCA20926BE77E800ECBC43 /* CustomKeyboardViewController.swift */,
 				73CCA20B26BEBEDD00ECBC43 /* CustomKeyboard.swift */,
+				734FDDDD26BF8582002AE26E /* CustomSwitchViewController.swift */,
 			);
 			path = AutolayoutPractice;
 			sourceTree = "<group>";
@@ -145,6 +148,7 @@
 			files = (
 				73CCA20A26BE77E800ECBC43 /* CustomKeyboardViewController.swift in Sources */,
 				73CCA20C26BEBEDD00ECBC43 /* CustomKeyboard.swift in Sources */,
+				734FDDDE26BF8582002AE26E /* CustomSwitchViewController.swift in Sources */,
 				7300D62B26B6847F00586E46 /* CertViewController.swift in Sources */,
 				736C4BC026B5675B00BEB1CA /* ViewController.swift in Sources */,
 				736C4BBC26B5675B00BEB1CA /* AppDelegate.swift in Sources */,
