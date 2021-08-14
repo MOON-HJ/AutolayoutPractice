@@ -47,11 +47,27 @@ class ExpandableViewController: UIViewController {
     }
 }
 
+/*
+ 토글시 애니메아션 튀는 현상 방지하기 위한 방법
+ 
+ 1. heightForRowAt 에서 정확한 높이 지정
+ 2. tableview.reloadData()
+ 3. tableView.estimatedSectionHeaderHeight = 0
+    tableView.estimatedSectionFooterHeight = 0
+ 4. 애니메이션 효과 없애기 -> 확실히 해결
+ */
+
 extension ExpandableViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.dataModels[indexPath.row].isExpanded.toggle()
+//        tableView.reloadRows(at: [indexPath], with: .none)
         
+//        tableView.reloadData()
+        
+        UIView.setAnimationsEnabled(false)
         tableView.reloadRows(at: [indexPath], with: .none)
+        UIView.setAnimationsEnabled(true)
+
     }
 }
 
