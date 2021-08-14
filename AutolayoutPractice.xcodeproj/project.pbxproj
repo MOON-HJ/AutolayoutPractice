@@ -13,6 +13,7 @@
 		736C4BC026B5675B00BEB1CA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736C4BBF26B5675B00BEB1CA /* ViewController.swift */; };
 		736C4BC526B5675E00BEB1CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 736C4BC426B5675E00BEB1CA /* Assets.xcassets */; };
 		736C4BD126B5685000BEB1CA /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 736C4BD026B5685000BEB1CA /* SnapKit */; };
+		7374465926C7E51300B6E3F3 /* ExpandableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7374465826C7E51300B6E3F3 /* ExpandableViewController.swift */; };
 		73CCA20A26BE77E800ECBC43 /* CustomKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CCA20926BE77E800ECBC43 /* CustomKeyboardViewController.swift */; };
 		73CCA20C26BEBEDD00ECBC43 /* CustomKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CCA20B26BEBEDD00ECBC43 /* CustomKeyboard.swift */; };
 /* End PBXBuildFile section */
@@ -25,6 +26,7 @@
 		736C4BBF26B5675B00BEB1CA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		736C4BC426B5675E00BEB1CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		736C4BC926B5675E00BEB1CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7374465826C7E51300B6E3F3 /* ExpandableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableViewController.swift; sourceTree = "<group>"; };
 		73CCA20926BE77E800ECBC43 /* CustomKeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomKeyboardViewController.swift; sourceTree = "<group>"; };
 		73CCA20B26BEBEDD00ECBC43 /* CustomKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomKeyboard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -68,6 +70,7 @@
 				73CCA20926BE77E800ECBC43 /* CustomKeyboardViewController.swift */,
 				73CCA20B26BEBEDD00ECBC43 /* CustomKeyboard.swift */,
 				734FDDDD26BF8582002AE26E /* CustomSwitchViewController.swift */,
+				7374465826C7E51300B6E3F3 /* ExpandableViewController.swift */,
 			);
 			path = AutolayoutPractice;
 			sourceTree = "<group>";
@@ -146,6 +149,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7374465926C7E51300B6E3F3 /* ExpandableViewController.swift in Sources */,
 				73CCA20A26BE77E800ECBC43 /* CustomKeyboardViewController.swift in Sources */,
 				73CCA20C26BEBEDD00ECBC43 /* CustomKeyboard.swift in Sources */,
 				734FDDDE26BF8582002AE26E /* CustomSwitchViewController.swift in Sources */,

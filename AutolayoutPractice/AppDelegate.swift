@@ -24,7 +24,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        window?.rootViewController = CustomKeyboardViewController()
         
         // 커스텀 스위치
-        window?.rootViewController = CustomSwitchViewController()
+//        window?.rootViewController = CustomSwitchViewController()
+        
+        // 아코디언
+        window?.rootViewController = ExpandableViewController()
 
         window?.makeKeyAndVisible()
         return true
