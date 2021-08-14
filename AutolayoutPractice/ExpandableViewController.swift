@@ -19,9 +19,7 @@ class ExpandableViewController: UIViewController {
         self.tableView.dataSource = self
         self.tableView.allowsSelection = false
         
-        // tableView의 계산된 높이 값은 68이다. 즉 Default Height이다.
-        tableView.estimatedRowHeight = 68.0
-        // tableView의 rowHeight는 유동적일 수 있다
+        
         tableView.rowHeight = UITableView.automaticDimension
 
         tableView.register(ExpandableCell.self, forCellReuseIdentifier: ExpandableCell.id)
@@ -74,9 +72,13 @@ final class ExpandableCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    override func layoutIfNeeded() {
+        super.layoutIfNeeded()
+        self.setUpConstraints()
+    }
+    
     override func layoutSubviews() {
         super.layoutSubviews()
-        self.backgroundColor = .systemRed
         
         titleLabel.sizeToFit()
         titleLabel.numberOfLines = 1
@@ -87,9 +89,13 @@ final class ExpandableCell: UITableViewCell {
         thumbnail.image = UIImage(named: "girl")
         
         [thumbnail, titleLabel, descriptionLabel].forEach {
-            self.contentView.addSubview($0)
+            self.addSubview($0)
         }
         
+        self.setUpConstraints()
+    }
+    
+    private func setUpConstraints() {
         thumbnail.snp.makeConstraints {
             $0.top.left.equalToSuperview().offset(16)
             $0.width.height.equalTo(48)
@@ -105,5 +111,6 @@ final class ExpandableCell: UITableViewCell {
             $0.top.equalTo(thumbnail.snp.bottom).offset(16)
             $0.bottom.equalToSuperview().offset(-16)
         }
+
     }
 }
