@@ -27,7 +27,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        window?.rootViewController = CustomSwitchViewController()
         
         // 아코디언
-        window?.rootViewController = ExpandableViewController()
+//        window?.rootViewController = ExpandableViewController()
+        
+        // 플로팅버튼
+        window?.rootViewController = FloatingButtonViewController()
 
         window?.makeKeyAndVisible()
         return true

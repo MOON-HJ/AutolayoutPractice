@@ -16,6 +16,7 @@
 		7374465926C7E51300B6E3F3 /* ExpandableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7374465826C7E51300B6E3F3 /* ExpandableViewController.swift */; };
 		73CCA20A26BE77E800ECBC43 /* CustomKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CCA20926BE77E800ECBC43 /* CustomKeyboardViewController.swift */; };
 		73CCA20C26BEBEDD00ECBC43 /* CustomKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CCA20B26BEBEDD00ECBC43 /* CustomKeyboard.swift */; };
+		73FF847626C8F07D0015DB3E /* FloatingButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FF847526C8F07D0015DB3E /* FloatingButtonViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		7374465826C7E51300B6E3F3 /* ExpandableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableViewController.swift; sourceTree = "<group>"; };
 		73CCA20926BE77E800ECBC43 /* CustomKeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomKeyboardViewController.swift; sourceTree = "<group>"; };
 		73CCA20B26BEBEDD00ECBC43 /* CustomKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomKeyboard.swift; sourceTree = "<group>"; };
+		73FF847526C8F07D0015DB3E /* FloatingButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingButtonViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 				73CCA20B26BEBEDD00ECBC43 /* CustomKeyboard.swift */,
 				734FDDDD26BF8582002AE26E /* CustomSwitchViewController.swift */,
 				7374465826C7E51300B6E3F3 /* ExpandableViewController.swift */,
+				73FF847526C8F07D0015DB3E /* FloatingButtonViewController.swift */,
 			);
 			path = AutolayoutPractice;
 			sourceTree = "<group>";
@@ -153,6 +156,7 @@
 				73CCA20A26BE77E800ECBC43 /* CustomKeyboardViewController.swift in Sources */,
 				73CCA20C26BEBEDD00ECBC43 /* CustomKeyboard.swift in Sources */,
 				734FDDDE26BF8582002AE26E /* CustomSwitchViewController.swift in Sources */,
+				73FF847626C8F07D0015DB3E /* FloatingButtonViewController.swift in Sources */,
 				7300D62B26B6847F00586E46 /* CertViewController.swift in Sources */,
 				736C4BC026B5675B00BEB1CA /* ViewController.swift in Sources */,
 				736C4BBC26B5675B00BEB1CA /* AppDelegate.swift in Sources */,
