@@ -116,13 +116,21 @@ class FloatedButtonViewController: UIViewController {
     }
 
     @objc func didTapFloatingButton(sender: UIButton) {
-        self.dismiss(animated: false, completion: nil)
+        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.9, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
+            self.btn1CenterY?.update(offset: 0)
+            self.btn2CenterY?.update(offset: 0)
+            self.btn3CenterY?.update(offset: 0)
+            
+            self.view.layoutIfNeeded()
+        }, completion: { _ in
+            self.dismiss(animated: false, completion: nil)
+        })
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        UIView.animate(withDuration: 1, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 0, options: .curveEaseInOut) {
+        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.6, initialSpringVelocity: 0, options: .curveEaseInOut) {
             self.btn1CenterY?.update(offset: -80)
             self.btn2CenterY?.update(offset: -160)
             self.btn3CenterY?.update(offset: -240)
