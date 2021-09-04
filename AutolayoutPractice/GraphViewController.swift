@@ -30,13 +30,13 @@ class GraphViewController: UIViewController {
     let button2 = UIButton()
 
     override func viewDidLoad() {
-        container.backgroundColor = .systemGray2
+        container.backgroundColor = .lightGray
 
-        graphA.backgroundColor = .systemRed
-        graphB.backgroundColor = .systemGreen
+        graphA.backgroundColor = .systemBlue
+        graphB.backgroundColor = .systemBlue
         graphC.backgroundColor = .systemBlue
-        graphD.backgroundColor = .systemYellow
-        graphE.backgroundColor = .systemPink
+        graphD.backgroundColor = .systemBlue
+        graphE.backgroundColor = .systemBlue
         
         button1.setTitle("1번", for: .normal)
         button2.setTitle("2번", for: .normal)
