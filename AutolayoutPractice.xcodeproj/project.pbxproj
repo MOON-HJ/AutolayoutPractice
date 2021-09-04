@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		7300D62B26B6847F00586E46 /* CertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7300D62A26B6847F00586E46 /* CertViewController.swift */; };
 		734FDDDE26BF8582002AE26E /* CustomSwitchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734FDDDD26BF8582002AE26E /* CustomSwitchViewController.swift */; };
+		7355FEF126E39BED00B2E30A /* GraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7355FEF026E39BED00B2E30A /* GraphViewController.swift */; };
 		736C4BBC26B5675B00BEB1CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736C4BBB26B5675B00BEB1CA /* AppDelegate.swift */; };
 		736C4BC026B5675B00BEB1CA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736C4BBF26B5675B00BEB1CA /* ViewController.swift */; };
 		736C4BC526B5675E00BEB1CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 736C4BC426B5675E00BEB1CA /* Assets.xcassets */; };
@@ -22,6 +23,7 @@
 /* Begin PBXFileReference section */
 		7300D62A26B6847F00586E46 /* CertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertViewController.swift; sourceTree = "<group>"; };
 		734FDDDD26BF8582002AE26E /* CustomSwitchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSwitchViewController.swift; sourceTree = "<group>"; };
+		7355FEF026E39BED00B2E30A /* GraphViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphViewController.swift; sourceTree = "<group>"; };
 		736C4BB826B5675B00BEB1CA /* AutolayoutPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutolayoutPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		736C4BBB26B5675B00BEB1CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		736C4BBF26B5675B00BEB1CA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 				734FDDDD26BF8582002AE26E /* CustomSwitchViewController.swift */,
 				7374465826C7E51300B6E3F3 /* ExpandableViewController.swift */,
 				73FF847526C8F07D0015DB3E /* FloatingButtonViewController.swift */,
+				7355FEF026E39BED00B2E30A /* GraphViewController.swift */,
 			);
 			path = AutolayoutPractice;
 			sourceTree = "<group>";
@@ -152,6 +155,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7355FEF126E39BED00B2E30A /* GraphViewController.swift in Sources */,
 				7374465926C7E51300B6E3F3 /* ExpandableViewController.swift in Sources */,
 				73CCA20A26BE77E800ECBC43 /* CustomKeyboardViewController.swift in Sources */,
 				73CCA20C26BEBEDD00ECBC43 /* CustomKeyboard.swift in Sources */,

@@ -30,7 +30,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        window?.rootViewController = ExpandableViewController()
         
         // 플로팅버튼
-        window?.rootViewController = FloatingButtonViewController()
+//        window?.rootViewController = FloatingButtonViewController()
+        
+        // 그래프
+        window?.rootViewController = GraphViewController()
 
         window?.makeKeyAndVisible()
         return true
