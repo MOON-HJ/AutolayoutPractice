@@ -33,8 +33,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        window?.rootViewController = FloatingButtonViewController()
         
         // 그래프
-        window?.rootViewController = GraphViewController()
+//        window?.rootViewController = GraphViewController()
 
+        // 커스텀 뷰
+        window?.rootViewController = DiagonalViewController()
+        
         window?.makeKeyAndVisible()
         return true
     }

@@ -15,6 +15,8 @@
 		736C4BC526B5675E00BEB1CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 736C4BC426B5675E00BEB1CA /* Assets.xcassets */; };
 		736C4BD126B5685000BEB1CA /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 736C4BD026B5685000BEB1CA /* SnapKit */; };
 		7374465926C7E51300B6E3F3 /* ExpandableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7374465826C7E51300B6E3F3 /* ExpandableViewController.swift */; };
+		73A1997526E4F81000F57FF0 /* DiagonalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A1997426E4F81000F57FF0 /* DiagonalViewController.swift */; };
+		73A1997726E4F81900F57FF0 /* DiagonalImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A1997626E4F81900F57FF0 /* DiagonalImageView.swift */; };
 		73CCA20A26BE77E800ECBC43 /* CustomKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CCA20926BE77E800ECBC43 /* CustomKeyboardViewController.swift */; };
 		73CCA20C26BEBEDD00ECBC43 /* CustomKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CCA20B26BEBEDD00ECBC43 /* CustomKeyboard.swift */; };
 		73FF847626C8F07D0015DB3E /* FloatingButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FF847526C8F07D0015DB3E /* FloatingButtonViewController.swift */; };
@@ -30,6 +32,8 @@
 		736C4BC426B5675E00BEB1CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		736C4BC926B5675E00BEB1CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7374465826C7E51300B6E3F3 /* ExpandableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableViewController.swift; sourceTree = "<group>"; };
+		73A1997426E4F81000F57FF0 /* DiagonalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagonalViewController.swift; sourceTree = "<group>"; };
+		73A1997626E4F81900F57FF0 /* DiagonalImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagonalImageView.swift; sourceTree = "<group>"; };
 		73CCA20926BE77E800ECBC43 /* CustomKeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomKeyboardViewController.swift; sourceTree = "<group>"; };
 		73CCA20B26BEBEDD00ECBC43 /* CustomKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomKeyboard.swift; sourceTree = "<group>"; };
 		73FF847526C8F07D0015DB3E /* FloatingButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingButtonViewController.swift; sourceTree = "<group>"; };
@@ -77,6 +81,8 @@
 				7374465826C7E51300B6E3F3 /* ExpandableViewController.swift */,
 				73FF847526C8F07D0015DB3E /* FloatingButtonViewController.swift */,
 				7355FEF026E39BED00B2E30A /* GraphViewController.swift */,
+				73A1997426E4F81000F57FF0 /* DiagonalViewController.swift */,
+				73A1997626E4F81900F57FF0 /* DiagonalImageView.swift */,
 			);
 			path = AutolayoutPractice;
 			sourceTree = "<group>";
@@ -158,8 +164,10 @@
 				7355FEF126E39BED00B2E30A /* GraphViewController.swift in Sources */,
 				7374465926C7E51300B6E3F3 /* ExpandableViewController.swift in Sources */,
 				73CCA20A26BE77E800ECBC43 /* CustomKeyboardViewController.swift in Sources */,
+				73A1997726E4F81900F57FF0 /* DiagonalImageView.swift in Sources */,
 				73CCA20C26BEBEDD00ECBC43 /* CustomKeyboard.swift in Sources */,
 				734FDDDE26BF8582002AE26E /* CustomSwitchViewController.swift in Sources */,
+				73A1997526E4F81000F57FF0 /* DiagonalViewController.swift in Sources */,
 				73FF847626C8F07D0015DB3E /* FloatingButtonViewController.swift in Sources */,
 				7300D62B26B6847F00586E46 /* CertViewController.swift in Sources */,
 				736C4BC026B5675B00BEB1CA /* ViewController.swift in Sources */,
