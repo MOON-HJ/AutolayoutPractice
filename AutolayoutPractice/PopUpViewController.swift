@@ -8,34 +8,37 @@
 import UIKit
 import SnapKit
 
-//class PopUpViewController: UIViewController {
-//    let button = UIButton()
-//
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//        view.backgroundColor = .white
-//
-//        button.setTitle("버튼 클릭ㄱ", for: .normal)
-//        button.setTitleColor(.systemPink, for: .normal)
-//        button.addTarget(self, action: #selector(didTap), for: .touchUpInside)
-//
-//        [button].forEach {
-//            self.view.addSubview($0)
-//        }
-//
-//        button.snp.makeConstraints {
-//            $0.centerX.equalToSuperview()
-//            $0.centerY.equalToSuperview()
-//        }
-//    }
-//
-//    @objc func didTap(sender: UIButton) {
-//        print("did Tap")
-//    }
-//}
-
-
 class PopUpViewController: UIViewController {
+    let button = UIButton()
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.backgroundColor = .white
+
+        button.setTitle("버튼 클릭ㄱ", for: .normal)
+        button.setTitleColor(.systemPink, for: .normal)
+        button.addTarget(self, action: #selector(didTap), for: .touchUpInside)
+
+        [button].forEach {
+            self.view.addSubview($0)
+        }
+
+        button.snp.makeConstraints {
+            $0.centerX.equalToSuperview()
+            $0.centerY.equalToSuperview().multipliedBy(0.2)
+        }
+    }
+
+    @objc func didTap(sender: UIButton) {
+        let vc = PopUpView()
+        vc.modalPresentationStyle = .overCurrentContext
+        vc.modalTransitionStyle = .crossDissolve
+        self.present(vc, animated: true, completion: nil)
+    }
+}
+
+
+class PopUpView: UIViewController {
     let container = UIView()
     let imageView = UIImageView(image: UIImage(named: "bg5"))
     let balloon = UIImageView(image: UIImage(named: "balloon_3"))
@@ -43,13 +46,13 @@ class PopUpViewController: UIViewController {
     let textField = UITextField()
     let leftButton = UIButton()
     let rightButton = UIButton()
+    let cancleButton = UIButton()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        view.backgroundColor = .black
+        view.backgroundColor = UIColor.black.withAlphaComponent(0.55)
         container.backgroundColor = UIColor(red: 211/255, green:  211/255, blue:  211/255, alpha: 1)
-        container.layer.cornerRadius = 8
+        container.layer.cornerRadius = 10
         container.clipsToBounds = true
         label.text = "나는글자 나는글자 나는 매우 긴 글자, 나는 두 줄 글자"
         label.textColor = .black
@@ -59,8 +62,10 @@ class PopUpViewController: UIViewController {
         leftButton.setTitleColor(.systemGray6, for: .normal)
         rightButton.setTitle("나는오른쪽", for: .normal)
         rightButton.setTitleColor(.systemRed, for: .normal)
+        cancleButton.setImage(.remove, for: .normal)
+        cancleButton.addTarget(self, action: #selector(didTap), for: .touchUpInside)
         
-        [container, balloon].forEach {
+        [container, balloon, cancleButton].forEach {
             self.view.addSubview($0)
         }
         
@@ -77,6 +82,11 @@ class PopUpViewController: UIViewController {
             $0.height.equalTo(100)
             $0.width.equalTo(70)
             $0.centerX.equalToSuperview()
+            $0.centerY.equalTo(container.snp.top)
+        }
+        
+        cancleButton.snp.makeConstraints {
+            $0.centerX.equalTo(container.snp.right)
             $0.centerY.equalTo(container.snp.top)
         }
         
@@ -113,5 +123,9 @@ class PopUpViewController: UIViewController {
             $0.bottom.equalTo(leftButton)
         }
 
+    }
+    
+    @objc func didTap(sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
     }
 }
