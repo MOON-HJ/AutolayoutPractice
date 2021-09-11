@@ -36,7 +36,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        window?.rootViewController = GraphViewController()
 
         // 커스텀 뷰
-        window?.rootViewController = DiagonalViewController()
+//        window?.rootViewController = DiagonalViewController()
+        
+        // 팝업
+        window?.rootViewController = PopUpViewController()
         
         window?.makeKeyAndVisible()
         return true
