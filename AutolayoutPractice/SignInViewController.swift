@@ -19,6 +19,9 @@ class SignInViewController: UIViewController {
     let descriptionEmailLabel = UILabel()
     let descriptionPasswordLabel = UILabel()
 
+    var descriptionEmailLabelHeight: Constraint?
+    var descriptionPasswordLabelHeight: Constraint?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
@@ -82,6 +85,7 @@ class SignInViewController: UIViewController {
             $0.top.equalTo(emailField.snp.bottom).offset(5)
             $0.left.equalToSuperview().offset(20)
             $0.right.equalToSuperview().offset(-20)
+            descriptionEmailLabelHeight = $0.height.equalTo(0).constraint
         }
 
         passwordLabel.snp.makeConstraints {
@@ -100,6 +104,7 @@ class SignInViewController: UIViewController {
             $0.top.equalTo(passwordField.snp.bottom).offset(5)
             $0.left.equalToSuperview().offset(20)
             $0.right.equalToSuperview().offset(-20)
+            descriptionPasswordLabelHeight = $0.height.equalTo(0).constraint
         }
 
         signinButton.snp.makeConstraints {
@@ -109,20 +114,18 @@ class SignInViewController: UIViewController {
             
         }
         
-        
         emailField.addTarget(self, action: #selector(didEditChangeField), for: .editingChanged)
+        passwordField.addTarget(self, action: #selector(didEditChangeField), for: .editingChanged)
     }
     
     @objc func didEditChangeField(sender: UITextField) {
         switch sender {
         case emailField:
-            guard isValidEmail(email: sender.text) else {
-                return
-            }
-            descriptionEmailLabel.heightAnchor.constraint(equalToConstant: 0).isActive = true
-        
+            self.descriptionEmailLabelHeight?.isActive = self.isValidEmail(email: sender.text)
+
         case passwordField:
-            print(sender.text)
+            self.descriptionPasswordLabelHeight?.isActive = self.isValidPassword(password: sender.text)
+            
         default:
             return
         }
@@ -134,6 +137,10 @@ class SignInViewController: UIViewController {
         let regex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
         let pred = NSPredicate(format: "SELF MATCHES %@", regex)
         return pred.evaluate(with: email)
+    }
+    
+    private func isValidPassword(password: String?) -> Bool {
+        return password?.count ?? 0 >= 8
     }
 }
 
