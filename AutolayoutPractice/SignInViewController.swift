@@ -116,12 +116,24 @@ class SignInViewController: UIViewController {
     @objc func didEditChangeField(sender: UITextField) {
         switch sender {
         case emailField:
-            break
+            guard isValidEmail(email: sender.text) else {
+                return
+            }
+            descriptionEmailLabel.heightAnchor.constraint(equalToConstant: 0).isActive = true
+        
         case passwordField:
-            break
+            print(sender.text)
         default:
             return
         }
+    }
+    
+    private func isValidEmail(email: String?) -> Bool {
+        guard email != nil else { return false }
+        
+        let regex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+        let pred = NSPredicate(format: "SELF MATCHES %@", regex)
+        return pred.evaluate(with: email)
     }
 }
 
