@@ -39,7 +39,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        window?.rootViewController = DiagonalViewController()
         
         // 팝업
-        window?.rootViewController = PopUpViewController()
+//        window?.rootViewController = PopUpViewController()
+        
+        // 로그인
+        window?.rootViewController = SignInViewController()
         
         window?.makeKeyAndVisible()
         return true
