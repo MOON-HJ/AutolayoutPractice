@@ -108,6 +108,20 @@ class SignInViewController: UIViewController {
             $0.right.equalToSuperview().offset(-20)
             
         }
+        
+        
+        emailField.addTarget(self, action: #selector(didEditChangeField), for: .editingChanged)
+    }
+    
+    @objc func didEditChangeField(sender: UITextField) {
+        switch sender {
+        case emailField:
+            break
+        case passwordField:
+            break
+        default:
+            return
+        }
     }
 }
 
