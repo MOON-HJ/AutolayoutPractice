@@ -129,6 +129,10 @@ class SignInViewController: UIViewController {
         default:
             return
         }
+        
+        UIView.animate(withDuration: 0.1) {
+            self.view.layoutIfNeeded()
+        }
     }
     
     private func isValidEmail(email: String?) -> Bool {
