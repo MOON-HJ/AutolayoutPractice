@@ -42,7 +42,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        window?.rootViewController = PopUpViewController()
         
         // 로그인
-        window?.rootViewController = SignInViewController()
+//        window?.rootViewController = SignInViewController()
+
+        // 채팅 레이아웃
+        window?.rootViewController = ChatViewController()
         
         window?.makeKeyAndVisible()
         return true
