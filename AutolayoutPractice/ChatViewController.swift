@@ -10,18 +10,51 @@ import SnapKit
 
 class ChatViewController: UIViewController {
         
+    let tableView = UITableView()
+    let inputTextView = UIView()
+    let textView = UITextView()
+    let sendButton = UIButton()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        [titleLabel, emailLabel, passwordLabel, emailField, passwordField, signinButton, descriptionEmailLabel, descriptionPasswordLabel].forEach {
-//            self.view.addSubview($0)
-//        }
+        sendButton.setTitle("전송", for: .normal)
+        sendButton.setTitleColor(.systemBlue, for: .normal)
+        inputTextView.backgroundColor = .systemGray
         
-//        titleLabel.snp.makeConstraints {
-//            $0.top.equalTo(self.view.safeAreaLayoutGuide).offset(30)
-//            $0.left.equalToSuperview().offset(20)
-//            $0.right.equalToSuperview().offset(-20)
-//        }
+        [inputTextView, tableView].forEach {
+            self.view.addSubview($0)
+        }
+
+        [textView, sendButton].forEach {
+            self.inputTextView.addSubview($0)
+        }
+        
+        tableView.snp.makeConstraints {
+            $0.top.equalTo(self.view.safeAreaLayoutGuide)
+            $0.left.right.equalToSuperview()
+            $0.bottom.equalTo(inputTextView.snp.top)
+        }
+        
+        inputTextView.snp.makeConstraints {
+            $0.left.right.equalToSuperview()
+            $0.bottom.equalTo(self.view.safeAreaLayoutGuide)
+        }
+    
+        textView.snp.makeConstraints {
+            $0.top.left.equalToSuperview().offset(4)
+            $0.right.equalTo(sendButton.snp.left).offset(-4)
+            $0.bottom.equalToSuperview().offset(-4)
+            $0.height.equalTo(40)
+        }
+        
+        sendButton.snp.makeConstraints {
+            $0.top.equalToSuperview()
+            $0.right.bottom.equalToSuperview().offset(-4)
+        }
+        sendButton.contentEdgeInsets.left = 20
+        sendButton.contentEdgeInsets.right = 20
+        
         
     }
 }
