@@ -17,6 +17,7 @@
 		736C4BD126B5685000BEB1CA /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 736C4BD026B5685000BEB1CA /* SnapKit */; };
 		7374465926C7E51300B6E3F3 /* ExpandableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7374465826C7E51300B6E3F3 /* ExpandableViewController.swift */; };
 		73853FE426F62C4500A5364E /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73853FE326F62C4500A5364E /* ChatViewController.swift */; };
+		73853FE626F634F400A5364E /* MyBubbleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73853FE526F634F400A5364E /* MyBubbleTableViewCell.swift */; };
 		73A1997526E4F81000F57FF0 /* DiagonalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A1997426E4F81000F57FF0 /* DiagonalViewController.swift */; };
 		73A1997726E4F81900F57FF0 /* DiagonalImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A1997626E4F81900F57FF0 /* DiagonalImageView.swift */; };
 		73AA2E3D26EDFA40006AED32 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AA2E3C26EDFA40006AED32 /* SignInViewController.swift */; };
@@ -37,6 +38,7 @@
 		736C4BC926B5675E00BEB1CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7374465826C7E51300B6E3F3 /* ExpandableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableViewController.swift; sourceTree = "<group>"; };
 		73853FE326F62C4500A5364E /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		73853FE526F634F400A5364E /* MyBubbleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBubbleTableViewCell.swift; sourceTree = "<group>"; };
 		73A1997426E4F81000F57FF0 /* DiagonalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagonalViewController.swift; sourceTree = "<group>"; };
 		73A1997626E4F81900F57FF0 /* DiagonalImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagonalImageView.swift; sourceTree = "<group>"; };
 		73AA2E3C26EDFA40006AED32 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 				73095B9326ECD44C00C42971 /* PopUpViewController.swift */,
 				73AA2E3C26EDFA40006AED32 /* SignInViewController.swift */,
 				73853FE326F62C4500A5364E /* ChatViewController.swift */,
+				73853FE526F634F400A5364E /* MyBubbleTableViewCell.swift */,
 			);
 			path = AutolayoutPractice;
 			sourceTree = "<group>";
@@ -170,6 +173,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73853FE626F634F400A5364E /* MyBubbleTableViewCell.swift in Sources */,
 				7355FEF126E39BED00B2E30A /* GraphViewController.swift in Sources */,
 				7374465926C7E51300B6E3F3 /* ExpandableViewController.swift in Sources */,
 				73CCA20A26BE77E800ECBC43 /* CustomKeyboardViewController.swift in Sources */,
