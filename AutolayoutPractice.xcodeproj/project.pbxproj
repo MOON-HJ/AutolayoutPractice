@@ -16,6 +16,7 @@
 		736C4BC526B5675E00BEB1CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 736C4BC426B5675E00BEB1CA /* Assets.xcassets */; };
 		736C4BD126B5685000BEB1CA /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 736C4BD026B5685000BEB1CA /* SnapKit */; };
 		7374465926C7E51300B6E3F3 /* ExpandableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7374465826C7E51300B6E3F3 /* ExpandableViewController.swift */; };
+		737CF87226F765750069A38B /* YourBubbleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737CF87126F765750069A38B /* YourBubbleTableViewCell.swift */; };
 		73853FE426F62C4500A5364E /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73853FE326F62C4500A5364E /* ChatViewController.swift */; };
 		73853FE626F634F400A5364E /* MyBubbleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73853FE526F634F400A5364E /* MyBubbleTableViewCell.swift */; };
 		73A1997526E4F81000F57FF0 /* DiagonalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A1997426E4F81000F57FF0 /* DiagonalViewController.swift */; };
@@ -37,6 +38,7 @@
 		736C4BC426B5675E00BEB1CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		736C4BC926B5675E00BEB1CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7374465826C7E51300B6E3F3 /* ExpandableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableViewController.swift; sourceTree = "<group>"; };
+		737CF87126F765750069A38B /* YourBubbleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourBubbleTableViewCell.swift; sourceTree = "<group>"; };
 		73853FE326F62C4500A5364E /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		73853FE526F634F400A5364E /* MyBubbleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBubbleTableViewCell.swift; sourceTree = "<group>"; };
 		73A1997426E4F81000F57FF0 /* DiagonalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagonalViewController.swift; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 				73AA2E3C26EDFA40006AED32 /* SignInViewController.swift */,
 				73853FE326F62C4500A5364E /* ChatViewController.swift */,
 				73853FE526F634F400A5364E /* MyBubbleTableViewCell.swift */,
+				737CF87126F765750069A38B /* YourBubbleTableViewCell.swift */,
 			);
 			path = AutolayoutPractice;
 			sourceTree = "<group>";
@@ -179,6 +182,7 @@
 				73CCA20A26BE77E800ECBC43 /* CustomKeyboardViewController.swift in Sources */,
 				73A1997726E4F81900F57FF0 /* DiagonalImageView.swift in Sources */,
 				73CCA20C26BEBEDD00ECBC43 /* CustomKeyboard.swift in Sources */,
+				737CF87226F765750069A38B /* YourBubbleTableViewCell.swift in Sources */,
 				73AA2E3D26EDFA40006AED32 /* SignInViewController.swift in Sources */,
 				734FDDDE26BF8582002AE26E /* CustomSwitchViewController.swift in Sources */,
 				73A1997526E4F81000F57FF0 /* DiagonalViewController.swift in Sources */,

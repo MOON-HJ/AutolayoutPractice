@@ -21,6 +21,9 @@ class ChatViewController: UIViewController {
         sendButton.setTitle("전송", for: .normal)
         sendButton.setTitleColor(.systemBlue, for: .normal)
         inputTextView.backgroundColor = .systemGray
+    
+        tableView.register(MyBubbleTableViewCell.self, forCellReuseIdentifier: MyBubbleTableViewCell.id)
+        tableView.register(YourBubbleTableViewCell.self, forCellReuseIdentifier: YourBubbleTableViewCell.id)
         
         [inputTextView, tableView].forEach {
             self.view.addSubview($0)
