@@ -14,6 +14,7 @@ class ChatViewController: UIViewController {
     let inputTextView = UIView()
     let textView = UITextView()
     let sendButton = UIButton()
+    private var inputViewBottomConstraint: Constraint?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +22,9 @@ class ChatViewController: UIViewController {
         sendButton.setTitle("전송", for: .normal)
         sendButton.setTitleColor(.systemBlue, for: .normal)
         inputTextView.backgroundColor = .systemGray
+
     
+        tableView.keyboardDismissMode = .onDrag
         tableView.register(MyBubbleTableViewCell.self, forCellReuseIdentifier: MyBubbleTableViewCell.id)
         tableView.register(YourBubbleTableViewCell.self, forCellReuseIdentifier: YourBubbleTableViewCell.id)
         
@@ -41,7 +44,7 @@ class ChatViewController: UIViewController {
         
         inputTextView.snp.makeConstraints {
             $0.left.right.equalToSuperview()
-            $0.bottom.equalTo(self.view.safeAreaLayoutGuide)
+            self.inputViewBottomConstraint = $0.bottom.equalTo(self.view.safeAreaLayoutGuide).constraint
         }
     
         textView.snp.makeConstraints {
@@ -57,8 +60,39 @@ class ChatViewController: UIViewController {
         }
         sendButton.contentEdgeInsets.left = 20
         sendButton.contentEdgeInsets.right = 20
-        
+        sendButton.addTarget(self, action: #selector(sendData), for: .touchUpInside)
+      
+      
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+
+    }
+    
+    @objc func sendData(sender: UIButton) {
         
     }
-}
+    
+    @objc func keyboardWillShow(notifiaction: Notification) {
+        let info = notifiaction.userInfo
+        guard let keyboardFrame = info?[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect else { return }
+    
+        let height = keyboardFrame.size.height - view.safeAreaInsets.bottom
+        
+        guard let animationDuration = info?[UIResponder.keyboardAnimationDurationUserInfoKey] as? TimeInterval else { return }
+        
+        UIView.animate(withDuration: animationDuration) { [weak self] in
+            self?.inputViewBottomConstraint?.update(offset: -height)
+            self?.view.layoutIfNeeded()
+        }
+    }
+    
+    @objc func keyboardWillHide(notifiaction: Notification) {
+        let info = notifiaction.userInfo
+        guard let animationDuration = info?[UIResponder.keyboardAnimationDurationUserInfoKey] as? TimeInterval else { return }
 
+        UIView.animate(withDuration: animationDuration) { [weak self] in
+            self?.inputViewBottomConstraint?.update(offset: 0)
+            self?.view.layoutIfNeeded()
+        }
+    }
+}
