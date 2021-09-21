@@ -10,7 +10,7 @@ import UIKit
 class YourBubbleTableViewCell: UITableViewCell {
     static let id = "YourBubble"
 
-    let textView = UITextView()
+    var textView = UITextView()
     let dateLabel = UILabel()
     let bubbleImage = UIImageView()
     
@@ -22,16 +22,17 @@ class YourBubbleTableViewCell: UITableViewCell {
             bubbleImage.image = bubble
             dateLabel.text = "2021.00.00"
             dateLabel.font = UIFont.systemFont(ofSize: 10)
+            textView.backgroundColor = .clear
             
-            [textView, bubbleImage, dateLabel].forEach {
+            [bubbleImage, textView, dateLabel].forEach {
                 self.addSubview($0)
             }
             
             textView.snp.makeConstraints {
-                $0.left.equalTo(textView).offset(20)
-                $0.right.equalTo(textView).offset(-10)
-                $0.top.equalTo(textView).offset(5)
-                $0.bottom.equalTo(textView).offset(-5)
+                $0.left.equalTo(bubbleImage).offset(25)
+                $0.right.equalTo(bubbleImage).offset(-5)
+                $0.top.equalTo(bubbleImage).offset(5)
+                $0.bottom.equalTo(bubbleImage).offset(-5)
             }
             
             bubbleImage.snp.makeConstraints {
@@ -44,7 +45,7 @@ class YourBubbleTableViewCell: UITableViewCell {
             dateLabel.snp.makeConstraints {
                 $0.right.lessThanOrEqualToSuperview().offset(-40).priority(.required)
                 $0.bottom.equalTo(bubbleImage)
-                $0.left.equalTo(bubbleImage.snp.left).offset(5)
+                $0.left.equalTo(bubbleImage.snp.right).offset(5)
             }
         }
         super.init(style: style, reuseIdentifier: reuseIdentifier)

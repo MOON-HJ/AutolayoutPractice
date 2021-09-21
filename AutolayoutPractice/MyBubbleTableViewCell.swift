@@ -10,7 +10,7 @@ import UIKit
 class MyBubbleTableViewCell: UITableViewCell {
     static let id = "MyBubble"
     
-    let textView = UITextView()
+    var textView = UITextView()
     let dateLabel = UILabel()
     let bubbleImage = UIImageView()
     
@@ -22,16 +22,17 @@ class MyBubbleTableViewCell: UITableViewCell {
             bubbleImage.image = bubble
             dateLabel.text = "2021.00.00"
             dateLabel.font = UIFont.systemFont(ofSize: 10)
+            textView.backgroundColor = .clear
             
-            [textView, bubbleImage, dateLabel].forEach {
+            [bubbleImage, textView, dateLabel].forEach {
                 self.addSubview($0)
             }
             
             textView.snp.makeConstraints {
-                $0.left.equalTo(textView).offset(10)
-                $0.right.equalTo(textView).offset(-20)
-                $0.top.equalTo(textView).offset(5)
-                $0.bottom.equalTo(textView).offset(-5)
+                $0.left.equalTo(bubbleImage).offset(5)
+                $0.right.equalTo(bubbleImage).offset(-25)
+                $0.top.equalTo(bubbleImage).offset(5)
+                $0.bottom.equalTo(bubbleImage).offset(-5)
             }
             
             bubbleImage.snp.makeConstraints {
