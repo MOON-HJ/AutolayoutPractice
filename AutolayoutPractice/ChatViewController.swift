@@ -16,6 +16,8 @@ class ChatViewController: UIViewController {
     let sendButton = UIButton()
     private var inputViewBottomConstraint: Constraint?
     
+    private var data: [String] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -27,6 +29,11 @@ class ChatViewController: UIViewController {
         tableView.keyboardDismissMode = .onDrag
         tableView.register(MyBubbleTableViewCell.self, forCellReuseIdentifier: MyBubbleTableViewCell.id)
         tableView.register(YourBubbleTableViewCell.self, forCellReuseIdentifier: YourBubbleTableViewCell.id)
+        tableView.separatorStyle = .none
+        tableView.allowsSelection = false
+    
+        tableView.delegate = self
+        tableView.dataSource = self
         
         [inputTextView, tableView].forEach {
             self.view.addSubview($0)
@@ -69,7 +76,11 @@ class ChatViewController: UIViewController {
     }
     
     @objc func sendData(sender: UIButton) {
-        
+        data.append(textView.text)
+        textView.text = ""
+        let last = IndexPath(row: data.count - 1, section: 0)
+        tableView.insertRows(at: [last], with: .automatic)
+        tableView.scrollToRow(at: last, at: .bottom, animated: true)
     }
     
     @objc func keyboardWillShow(notifiaction: Notification) {
@@ -93,6 +104,26 @@ class ChatViewController: UIViewController {
         UIView.animate(withDuration: animationDuration) { [weak self] in
             self?.inputViewBottomConstraint?.update(offset: 0)
             self?.view.layoutIfNeeded()
+        }
+    }
+}
+
+extension ChatViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return data.count
+    }
+}
+
+extension ChatViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if indexPath.row % 2 == 0 {
+            guard let myCell = tableView.dequeueReusableCell(withIdentifier: MyBubbleTableViewCell.id, for: indexPath) as? MyBubbleTableViewCell else { return UITableViewCell()}
+            myCell.textView.text = data[indexPath.row]
+            return myCell
+        } else {
+            guard let yourCell = tableView.dequeueReusableCell(withIdentifier: YourBubbleTableViewCell.id, for: indexPath) as? YourBubbleTableViewCell else { return UITableViewCell()}
+            yourCell.textView.text = data[indexPath.row]
+            return yourCell
         }
     }
 }
