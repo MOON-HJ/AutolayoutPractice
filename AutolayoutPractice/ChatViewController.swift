@@ -15,7 +15,7 @@ class ChatViewController: UIViewController {
     let textView = UITextView()
     let sendButton = UIButton()
     private var inputViewBottomConstraint: Constraint?
-    
+    private var textViewHeightConstraint: Constraint?
     private var data: [String] = []
     
     override func viewDidLoad() {
@@ -24,7 +24,7 @@ class ChatViewController: UIViewController {
         sendButton.setTitle("전송", for: .normal)
         sendButton.setTitleColor(.systemBlue, for: .normal)
         inputTextView.backgroundColor = .systemGray
-
+        textView.delegate = self
     
         tableView.keyboardDismissMode = .onDrag
         tableView.register(MyBubbleTableViewCell.self, forCellReuseIdentifier: MyBubbleTableViewCell.id)
@@ -58,7 +58,7 @@ class ChatViewController: UIViewController {
             $0.top.left.equalToSuperview().offset(4)
             $0.right.equalTo(sendButton.snp.left).offset(-4)
             $0.bottom.equalToSuperview().offset(-4)
-            $0.height.equalTo(40)
+            self.textViewHeightConstraint = $0.height.equalTo(40).constraint
         }
         
         sendButton.snp.makeConstraints {
@@ -81,6 +81,7 @@ class ChatViewController: UIViewController {
         let last = IndexPath(row: data.count - 1, section: 0)
         tableView.insertRows(at: [last], with: .automatic)
         tableView.scrollToRow(at: last, at: .bottom, animated: true)
+        textViewHeightConstraint?.update(offset: 40)
     }
     
     @objc func keyboardWillShow(notifiaction: Notification) {
@@ -125,5 +126,15 @@ extension ChatViewController: UITableViewDataSource {
             yourCell.textView.text = data[indexPath.row]
             return yourCell
         }
+    }
+}
+
+extension ChatViewController: UITextViewDelegate {
+    func textViewDidChange(_ textView: UITextView) {
+        var height = textView.contentSize.height
+        height = height <= 40 ? 40 : height
+        height = height >= 100 ? 100 : height
+    
+        self.textViewHeightConstraint?.update(offset: height)
     }
 }
