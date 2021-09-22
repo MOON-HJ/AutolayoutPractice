@@ -15,7 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds)
         // 계산기 레이아웃
-//        window?.rootViewController = ViewController()
+//        window?.rootViewController = CalculateViewController()
         
         // 인증서 레이아웃
 //        window?.rootViewController = CertViewController()
