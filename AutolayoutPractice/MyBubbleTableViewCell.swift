@@ -17,9 +17,7 @@ class MyBubbleTableViewCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         defer {
             textView.isScrollEnabled = false
-            let bubble = UIImage(named: "myBubble")
-            // TODO: Stretch 재설정 
-            bubble?.resizableImage(withCapInsets: UIEdgeInsetsMake(10, 18, 10, 18), resizingMode: .stretch)
+            let bubble = UIImage(named: "myBubble")?.resizableImage(withCapInsets: .init(top: 10, left: 25, bottom: 10, right: 25), resizingMode: .stretch)            
             bubbleImage.image = bubble
             dateLabel.text = "2021.00.00"
             dateLabel.font = UIFont.systemFont(ofSize: 10)

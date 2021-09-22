@@ -20,7 +20,7 @@ class ChatViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.view.backgroundColor = .white
         sendButton.setTitle("전송", for: .normal)
         sendButton.setTitleColor(.systemBlue, for: .normal)
         inputTextView.backgroundColor = .systemGray
