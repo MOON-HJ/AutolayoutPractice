@@ -15,7 +15,7 @@
 
 | **커스텀 스위치**<br />[CustomSwitchViewController.swift](./AutolayoutPractice/CustomSwitchViewController.swift) | **Expandable View**<br />[ExpandableViewController.swift](./AutolayoutPractice/ExpandableViewController.swift) | **플로팅 버튼**<br />[FloatingButtonViewController](./AutolayoutPractice/FloatingButtonViewController.swift) |
 | :----------------------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| <img src="./images/switch.GIF" width=300>                    | <img src="./images/expandable.GIF" width=300>                | <img src="./images/floating.GIF" width=300>                  |
+| <img src="./images/switch.GIF" width=300>                    | <img src="./images/expandable.GIF" width=300>                | <img src="./images/floating.gif" width=300>                  |
 | - Update Constraint<br />- Corner Radius<br />- UIView Animation | - UITableView<br />- UIView Animation<br />- Reload TableView Data | - Update Constraint<br />- UIView Animation<br />- Blur Effect |
 
 
